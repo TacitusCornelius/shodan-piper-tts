@@ -1,8 +1,8 @@
 # shodan-piper-tts
 
 A [Piper](https://github.com/rhasspy/piper) TTS voice model of **SHODAN**, the
-malevolent AI from *System Shock 2* (1999). Trained on clips from the
-System Shock 2 Remake.
+malevolent AI of *System Shock*. Trained on clips from the **System Shock
+Remake** (Nightdive Studios, 2023).
 
 ## Files
 
@@ -48,7 +48,7 @@ with wave.open("shodan.wav", "wb") as f:
 ## Training provenance
 
 Trained with [TextyMcSpeechy](https://github.com/daswer123/textyspeechy)'s
-`tts_dojo` pipeline on a dataset of System Shock 2 Remake dialogue clips
+`tts_dojo` pipeline on a dataset of System Shock (2023 Remake) dialogue clips
 (9,689 training steps).
 
 ## Credits & legal
