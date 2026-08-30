@@ -45,6 +45,30 @@ with wave.open("shodan.wav", "wb") as f:
     voice.synthesize("The machine is awake.", f)
 ```
 
+## Xerxes voice model
+
+The repository also contains a Xerxes voice model from *System Shock 2*:
+
+| Folder | Contents |
+|---|---|
+| [`xerxes_v14_200k/`](./xerxes_v14_200k/) | `en_US-xerxes-medium.onnx` and its `.onnx.json` configuration |
+
+Download both files with:
+
+```bash
+mkdir -p ~/piper/voices/xerxes && cd ~/piper/voices/xerxes
+curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/xerxes_v14_200k/en_US-xerxes-medium.onnx
+curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/xerxes_v14_200k/en_US-xerxes-medium.onnx.json
+```
+
+Use it with:
+
+```bash
+echo "The containment protocol remains active." | piper \
+  --model ~/piper/voices/xerxes/en_US-xerxes-medium.onnx \
+  --output_file xerxes.wav
+```
+
 ## Training provenance
 
 Trained with [TextyMcSpeechy](https://github.com/daswer123/textyspeechy)'s
