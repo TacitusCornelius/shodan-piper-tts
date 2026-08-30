@@ -1,64 +1,55 @@
 # shodan-piper-tts
 
-A [Piper](https://github.com/rhasspy/piper) TTS voice model of **SHODAN**, the
-malevolent AI of *System Shock*. Trained on clips from the **System Shock
-Remake** (Nightdive Studios, 2023).
+A collection of [Piper](https://github.com/rhasspy/piper) TTS voice models for
+characters from the *System Shock* series.
 
-## Files
+## Voices
 
-| File | Purpose |
-|------|---------|
-| `en_US-shodan_remake_v2_9689-medium.onnx` | Model weights |
-| `en_US-shodan_remake_v2_9689-medium.onnx.json` | Voice config (phoneme map, sample rate, inference params) |
+| Folder | Voice | Source |
+|---|---|---|
+| [`shodan_remake_v2/`](./shodan_remake_v2/) | SHODAN | *System Shock Remake* (2023) |
+| [`Xerxes_medium/`](./Xerxes_medium/) | Xerxes | *System Shock 2* |
 
-- Sample rate: 22050 Hz (medium quality)
-- Language: `en_US`
+## SHODAN Remake voice model
 
-## Install
+The SHODAN model files are in [`shodan_remake_v2/`](./shodan_remake_v2/):
+
+```text
+en_US-shodan_remake_v2_9689-medium.onnx
+en_US-shodan_remake_v2_9689-medium.onnx.json
+```
 
 Download both files into a Piper voices directory:
 
 ```bash
-mkdir -p ~/piper/voices && cd ~/piper/voices
-curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/en_US-shodan_remake_v2_9689-medium.onnx
-curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/en_US-shodan_remake_v2_9689-medium.onnx.json
+mkdir -p ~/piper/voices/shodan && cd ~/piper/voices/shodan
+curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/shodan_remake_v2/en_US-shodan_remake_v2_9689-medium.onnx
+curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/shodan_remake_v2/en_US-shodan_remake_v2_9689-medium.onnx.json
 ```
 
-## Usage
+Use it with:
 
 ```bash
 echo "Look at you, hacker." | piper \
-  --model ~/piper/voices/en_US-shodan_remake_v2_9689-medium.onnx \
+  --model ~/piper/voices/shodan/en_US-shodan_remake_v2_9689-medium.onnx \
   --output_file shodan.wav
-```
-
-Or with the Python API:
-
-```python
-from piper import PiperVoice
-
-voice = PiperVoice.load(
-    "~/piper/voices/en_US-shodan_remake_v2_9689-medium.onnx",
-    config_path="~/piper/voices/en_US-shodan_remake_v2_9689-medium.onnx.json",
-)
-with wave.open("shodan.wav", "wb") as f:
-    voice.synthesize("The machine is awake.", f)
 ```
 
 ## Xerxes voice model
 
-The repository also contains a Xerxes voice model from *System Shock 2*:
+The Xerxes model files are in [`Xerxes_medium/`](./Xerxes_medium/):
 
-| Folder | Contents |
-|---|---|
-| [`xerxes_v14_200k/`](./xerxes_v14_200k/) | `en_US-xerxes-medium.onnx` and its `.onnx.json` configuration |
+```text
+en_US-xerxes-medium.onnx
+en_US-xerxes-medium.onnx.json
+```
 
 Download both files with:
 
 ```bash
 mkdir -p ~/piper/voices/xerxes && cd ~/piper/voices/xerxes
-curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/xerxes_v14_200k/en_US-xerxes-medium.onnx
-curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/xerxes_v14_200k/en_US-xerxes-medium.onnx.json
+curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/Xerxes_medium/en_US-xerxes-medium.onnx
+curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/Xerxes_medium/en_US-xerxes-medium.onnx.json
 ```
 
 Use it with:
@@ -71,12 +62,16 @@ echo "The containment protocol remains active." | piper \
 
 ## Training provenance
 
-Trained with [TextyMcSpeechy](https://github.com/daswer123/textyspeechy)'s
-`tts_dojo` pipeline on a dataset of System Shock (2023 Remake) dialogue clips
-(9,689 training steps).
+The SHODAN model was trained with [TextyMcSpeechy](https://github.com/daswer123/textyspeechy)'s
+`tts_dojo` pipeline on *System Shock Remake* dialogue clips.
 
-## Credits & legal
+The Xerxes model was trained with the same pipeline on an approved *System
+Shock 2* dialogue dataset. It passed a human review of the full 82-line
+catalogue and tests with fully original sentences that were not present in the
+training dataset.
 
-SHODAN and System Shock are properties of Nightdive Studios. This is a
-fan-made voice model for personal / non-commercial use. All rights to the
-source material belong to their respective owners.
+## Credits and legal
+
+SHODAN, Xerxes, and *System Shock* are properties of their respective rights
+holders. These are fan-made voice models. All rights to the source material
+belong to those rights holders.

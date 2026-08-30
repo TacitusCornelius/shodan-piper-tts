@@ -24,8 +24,8 @@ Download both files into a Piper voices directory:
 ```bash
 mkdir -p ~/piper/voices/xerxes
 cd ~/piper/voices/xerxes
-curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/xerxes_v14_200k/en_US-xerxes-medium.onnx
-curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/xerxes_v14_200k/en_US-xerxes-medium.onnx.json
+curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/Xerxes_medium/en_US-xerxes-medium.onnx
+curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/Xerxes_medium/en_US-xerxes-medium.onnx.json
 ```
 
 ## Usage
