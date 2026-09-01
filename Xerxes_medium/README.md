@@ -38,8 +38,7 @@ echo "The containment protocol remains active." | piper \
 
 ## Provenance
 
-The model was fine-tuned with the TextyMcSpeechy `tts_dojo` pipeline. It uses
-the approved Xerxes v14 dataset and the v14 200k checkpoint.
+The model was fine-tuned with the TextyMcSpeechy `tts_dojo` pipeline.
 
 The model passed a human review of the full 82-line catalogue and tests with
 fully original sentences that were not present in the training dataset.
