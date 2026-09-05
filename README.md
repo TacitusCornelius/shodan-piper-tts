@@ -7,31 +7,31 @@ characters from the *System Shock* series.
 
 | Folder | Voice | Source |
 |---|---|---|
-| [`shodan_remake_v2/`](./shodan_remake_v2/) | SHODAN | *System Shock Remake* (2023) |
+| [`shodan_remake/`](./shodan_remake/) | SHODAN | *System Shock Remake* (2023) |
 | [`Xerxes_medium/`](./Xerxes_medium/) | Xerxes | *System Shock 2* |
 
 ## SHODAN Remake voice model
 
-The SHODAN model files are in [`shodan_remake_v2/`](./shodan_remake_v2/):
+The SHODAN model files are in [`shodan_remake/`](./shodan_remake/):
 
 ```text
-en_US-shodan_remake_v2_9689-medium.onnx
-en_US-shodan_remake_v2_9689-medium.onnx.json
+en_US-shodan_remake-medium.onnx
+en_US-shodan_remake-medium.onnx.json
 ```
 
 Download both files into a Piper voices directory:
 
 ```bash
 mkdir -p ~/piper/voices/shodan && cd ~/piper/voices/shodan
-curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/shodan_remake_v2/en_US-shodan_remake_v2_9689-medium.onnx
-curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/shodan_remake_v2/en_US-shodan_remake_v2_9689-medium.onnx.json
+curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/shodan_remake/en_US-shodan_remake-medium.onnx
+curl -LO https://github.com/TacitusCornelius/shodan-piper-tts/raw/main/shodan_remake/en_US-shodan_remake-medium.onnx.json
 ```
 
 Use it with:
 
 ```bash
 echo "Look at you, hacker." | piper \
-  --model ~/piper/voices/shodan/en_US-shodan_remake_v2_9689-medium.onnx \
+  --model ~/piper/voices/shodan/en_US-shodan_remake-medium.onnx \
   --output_file shodan.wav
 ```
 
