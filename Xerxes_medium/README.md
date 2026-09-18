@@ -47,10 +47,10 @@ fully original sentences that were not present in the training dataset.
 
 ```text
 SHA-256  en_US-xerxes-medium.onnx
-1a5b1ccde83ab11b9b491203ebe3f55916de773b7c5807f520c5f8cedcd4248f
+7626e290d4549335d1031c3dc19baff36a4303a9798ba21d63a2fb3c49b96351
 
 SHA-256  en_US-xerxes-medium.onnx.json
-7926089a04716f2876987b1dbac87b8fec2ef1f3c4a191c9bf78f81041ae64ce
+ed8eb49ee3296bc3777d665ec281b9abd159ef3da8b8f4228e5e639124c50b2b
 ```
 
 ## Credits and legal
