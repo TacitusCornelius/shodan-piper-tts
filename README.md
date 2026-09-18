@@ -11,7 +11,7 @@ characters from the *System Shock* series.
 | [`Xerxes_medium/`](./Xerxes_medium/) | Xerxes | *System Shock 2* |
 
 The SHODAN Remake voice has been updated. I consider it complete.
-The Xerxes voice has worked well based on my testing. I may update it after some more tweaks.
+The Xerxes voice has been updated as well, and I consider it complete.
 The SHODAN SS2 voice is incredibly difficult to train on. The models I have created on it do not seem useful for actual TTS and I am considering abandoning that version.
 
 ## SHODAN Remake voice model
